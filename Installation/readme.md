@@ -8,7 +8,7 @@ The following installation has been implemented and successfully tested on [CUDA
 ## Preinstallation and CUDA compatibility
 The assumption is that the [CUDA](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#axzz4MnU6Gq6E) is already installed.
 
-Check the supporting GPU and the version using the following command:
+Check the supporting GPU(s) and Ubuntu version using the following command:
 
 ```
 lspci | grep -i nvidia
