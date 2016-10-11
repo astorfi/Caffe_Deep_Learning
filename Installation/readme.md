@@ -40,7 +40,7 @@ Caffe has different dependencies which are required by its structure. In the fol
 The Caffe installation in this documentation uses the build-in python of the Ubuntu-Trusty(14.04). However Anaconda-based installation can be performed but it is not required as for the moment it has more incompatibilies and may make the installation more complicated.
 
 ### Installing git, BLAS and unzip
-BLAS can be used as the backend of matrix and vector computations of Caffe. There are different implementations of this library. [OpenBLAS](http://www.openblas.net/) has been chosed. Alternatively you can refer to [OpenBLAS repository]{https://github.com/xianyi/OpenBLAS}.
+BLAS can be used as the backend of matrix and vector computations of Caffe. There are different implementations of this library. [OpenBLAS](http://www.openblas.net/) has been chosed. Alternatively you can refer to [OpenBLAS repository](https://github.com/xianyi/OpenBLAS).
 
 
 
