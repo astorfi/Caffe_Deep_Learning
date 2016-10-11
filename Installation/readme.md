@@ -1,7 +1,4 @@
 # Caffe Installation 
-[link](https://gist.github.com/titipata/f0ef48ad2f0ebc07bcb9)
-[Link2](http://stackoverflow.com/questions/24479060/ubuntu-12-04-ld-cannot-find-library)
-[Link3](https://github.com/BVLC/caffe/issues/559)
 
 The step by step processes of caffe installation in Ubuntu(14.04) is provided here. 
 
