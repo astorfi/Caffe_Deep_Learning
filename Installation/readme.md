@@ -51,9 +51,10 @@ The [OpenCV](https://help.ubuntu.com/community/OpenCV) is the well-known open-so
 
 There are three suggested way for installing OpenCV.
 
-1. Install directly using the [this file](https://github.com/astorfi/Caffe_Framework/blob/master/Installation/OpenCV_Installation/OpenCV.sh) available in this repository.
+1. Install directly using the [this bash script file](https://github.com/astorfi/Caffe_Framework/blob/master/Installation/OpenCV_Installation/OpenCV.sh) available in this repository.
 
-2. Install directly using the [second file](https://github.com/astorfi/Caffe_Framework/blob/master/Installation/OpenCV_Installation/OpenCV_Alternative.sh) available in this repository.
+2. Install directly using the [alternative bash script file](https://github.com/astorfi/Caffe_Framework/blob/master/Installation/OpenCV_Installation/OpenCV_Alternative.sh) available in this repository.
+* The second file is more abstract and installs less dependancies. This may lead to have less conflicts and incompatibilties.
 
 3. Install as follows for the particular version:
 ```
@@ -77,6 +78,41 @@ sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compi
 For protobuf installation, simple pip installation is recommended.
 ```
 pip install protobuf
+```
+
+## Clone and Install Caffe from Source
+In this phase, the Caffe repository must be cloned and install.
+Create a directory named "Caffe":
+```
+mkdir Caffe
+cd Caffe
+```
+
+Then the repository must be cloned:
+```
+git clone https://github.com/BVLC/caffe
+```
+
+Make a copy of "Makefile.config.example" under the new name of ""Makefile.config" to be modified if necessary.
+```
+cp Makefile.config.example Makefile.config
+```
+For makking any modification the "Makefile.config" must be opened. Here's are few possible modifications:
+
+* The CuDNN can be activated using the assigned flag.
+* Instead of Python, Anaconda can be used by changing the associated paths.
+* The default is using GPU but if the "CPU_ONLY := 1" is activated, then there is no GPU support!
+
+In the end we can compile and make all the test files:
+```
+make all
+make test
+make runtest
+```
+Then it might be necessary to copy appropriete files be copied in order to prevent [this issue](https://github.com/BVLC/caffe/issues/1463).
+```
+sudo cp libhdf5_hl.so.7 libhdf5_hl.so.8
+sudo cp libhdf5.so.7 libhdf5.so.8
 ```
 
 
