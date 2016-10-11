@@ -46,5 +46,7 @@ sudo apt-get install libopenblas-dev git unzip
 ```
 Alternatively you can refer to [OpenBLAS repository](https://github.com/xianyi/OpenBLAS).
 
+### Install OpenCV
+The [OpenCV](https://help.ubuntu.com/community/OpenCV) is the well-known open-source computer vision library.
 
 
