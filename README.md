@@ -1,3 +1,3 @@
-# Caffe_Framework
+# Caffe_Installation
 
-This repository is dedicated to Caffe deep learning framework. All the related files and document to Caffe written by the owner of this repository, are included in this repository.
+This repository is dedicated to Caffe deep learning framework. This document will explain the procedure of Caffe installation in detail.
