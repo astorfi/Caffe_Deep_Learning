@@ -2,7 +2,7 @@ This folder is related to OpenCV installation which is a dependecy for the Caffe
 
 Here's is the procedure and considerations:
 
-1. Download and run the ".sh" file for installing OpenCV.
+1. Download and run the "OpenCV.sh" file for installing OpenCV.
 2. Installing "ffmpeg" can be ignore for two reason:
   * the package might not be available in Ubuntu(14.04) 
   * Other possible incompatibilities.
