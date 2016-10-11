@@ -49,4 +49,28 @@ Alternatively you can refer to [OpenBLAS repository](https://github.com/xianyi/O
 ### Install OpenCV
 The [OpenCV](https://help.ubuntu.com/community/OpenCV) is the well-known open-source computer vision library.
 
+There are three suggested way for installing OpenCV.
+1. Install directly using the [This file](https://github.com/astorfi/Caffe_Framework/blob/master/Installation/OpenCV_Installation/OpenCV.sh) available in this repository.
+2. Install as follows:
+```
+wget https://raw.githubusercontent.com/jayrambhia/Install-OpenCV/master/Ubuntu/2.4/opencv2_4_9.sh
+chmod +x opencv2_4_9.sh 
+./opencv2_4_9.sh
+```
+3. Install using the source from the [this guide]http://www.pyimagesearch.com/2015/06/22/install-opencv-3-0-and-python-2-7-on-ubuntu/.
+
+### Install other dependecies(Boost,...)
+```
+sudo apt-get install libboost-all-dev
+sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libboost-all-dev libhdf5-serial-dev
+sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compiler
+```
+
+### Install protobuf
+
+For protobuf installation, simple pip installation is recommended.
+```
+pip install protobuf
+```
+
 
