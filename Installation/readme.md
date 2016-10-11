@@ -9,8 +9,9 @@ The following installation has been implemented and successfully tested on [CUDA
 The assumption is that the [CUDA](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#axzz4MnU6Gq6E) is already installed.
 
 Check the supporting GPU and the version using the following command:
-'''
+
+```
 lspci | grep -i nvidia
 uname -m && cat /etc/*release
  gcc --version
-'''
+```
