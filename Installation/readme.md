@@ -7,7 +7,7 @@ The following installation has been implemented and successfully tested on [CUDA
 
 ## CUDA installation
 
-For the [NVIDIA TITAN X(Pwered by Pascal) GPU](http://www.geforce.com/hardware/10series/titan-x-pascal), installing CUDA 8.0 is necessary. The CUDA 8.0 download file and installation procedure can be found [here](https://developer.nvidia.com/cuda-downloads). The system platform has to be chosen as the following image: ![](Images/Select Target Platform.png).
+For the [NVIDIA TITAN X(Pwered by Pascal) GPU](http://www.geforce.com/hardware/10series/titan-x-pascal), installing CUDA 8.0 is necessary. The CUDA 8.0 download file and installation procedure can be found [here](https://developer.nvidia.com/cuda-downloads). The system platform has to be chosen as the following image: ![](https://github.com/astorfi/Caffe_Framework/tree/master/Installation/Images/Select Target Platform.png).
 
 First using the terminalgo to the folder that the downloaded ".deb" file is located. Now the installation has to be done as follows:
 
