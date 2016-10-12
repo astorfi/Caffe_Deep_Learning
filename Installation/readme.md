@@ -48,6 +48,7 @@ The [OpenCV](https://help.ubuntu.com/community/OpenCV) is the well-known open-so
 
 There are three suggested way for installing OpenCV.
 
+#### Using bash script files
 1. Install directly by going to [this link](https://github.com/astorfi/Caffe_Framework/tree/master/Installation/OpenCV_Installation) and using one of the "OpenCV.sh" or "OpenCV_Alternative.sh" bash script files available in this repository.
  * The second file is more abstract and installs less dependancies. This may lead to have less conflicts and incompatibilties.
 2. Install as follows for the particular version:
@@ -57,8 +58,8 @@ wget https://raw.githubusercontent.com/jayrambhia/Install-OpenCV/master/Ubuntu/2
 chmod +x opencv2_4_9.sh 
 ./opencv2_4_9.sh
 ```
-
-3. Install using the source from the [source](http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html)
+#### Install from the source
+Install using the source from the [source](http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html)
 
 ### Install other dependecies(Boost,...)
 ```
