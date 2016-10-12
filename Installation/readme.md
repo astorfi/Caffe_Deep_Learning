@@ -79,13 +79,7 @@ pip install protobuf
 
 ## Clone and Install Caffe from Source
 In this phase, the Caffe repository must be cloned and install.
-Create a directory named "Caffe":
-```
-mkdir Caffe
-cd Caffe
-```
-
-Then the repository must be cloned:
+The repository must be cloned:
 ```
 git clone https://github.com/BVLC/caffe
 ```
