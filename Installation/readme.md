@@ -77,14 +77,19 @@ pip install protobuf
 ```
 
 ## Clone and Install Caffe from Source
-In this phase, the Caffe repository must be cloned and install.
+In this phase, the Caffe repository must be cloned and install. 
+A new directory can be make by the following command:
+```
+mkdir code
+```
 The repository must be cloned:
 ```
 git clone https://github.com/BVLC/caffe
 ```
 
-Make a copy of "Makefile.config.example" under the new name of ""Makefile.config" to be modified if necessary.
+After going to code directory, a copy of "Makefile.config.example" under the new name of ""Makefile.config" must be make to be modified if necessary.
 ```
+cd code
 cp Makefile.config.example Makefile.config
 ```
 For makking any modification the "Makefile.config" must be opened. Here's are few possible modifications:
