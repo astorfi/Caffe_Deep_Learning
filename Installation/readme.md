@@ -56,7 +56,7 @@ wget https://raw.githubusercontent.com/jayrambhia/Install-OpenCV/master/Ubuntu/2
 chmod +x opencv2_4_9.sh 
 ./opencv2_4_9.sh
 ```
- * The first two files are the edited version of the second method.
+  * The first two files are the edited version of the second method.
 
 3. Install using the source from the [source](http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html)
 
