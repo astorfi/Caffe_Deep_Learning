@@ -3,13 +3,13 @@
 The step by step processes of caffe installation in `Ubuntu(14.04)` is provided here. 
 
 ## Hardware & cuda version
-The following installation has been implemented and successfully tested on [CUDA 8.0](http://on-demand.gputechconf.com/gtc/2016/webinar/cuda-8-features-overview.pdf) and [NVIDIA TITAN X(Pwered by Pascal) GPU](http://www.geforce.com/hardware/10series/titan-x-pascal). However the method can simply be used for older version of 'CUDA' and older 'GPU architectures'.
+The following installation has been implemented and successfully tested on [CUDA 8.0](http://on-demand.gputechconf.com/gtc/2016/webinar/cuda-8-features-overview.pdf) and [NVIDIA TITAN X(Pwered by Pascal) GPU](http://www.geforce.com/hardware/10series/titan-x-pascal). However the method can simply be used for older version of `CUDA` and older '`GPU architectures`.
 
 ## CUDA installation
 
 For the [NVIDIA TITAN X(Pwered by Pascal) GPU](http://www.geforce.com/hardware/10series/titan-x-pascal), installing CUDA 8.0 is necessary. The CUDA 8.0 download file and installation procedure can be found [here](https://developer.nvidia.com/cuda-downloads). The system platform has to be chosen as the following image: ![](Images/Select Target Platform.png).
 
-First using the terminal go to the folder that the downloaded ".deb" file is located. Now the installation has to be done as follows:
+First using the terminal go to the folder that the downloaded `.deb` file is located. Now the installation has to be done as follows:
 
 ```
 sudo dpkg -i cuda-repo-ubuntu1404-8-0-local_8.0.44-1_amd64.deb
@@ -17,7 +17,7 @@ sudo apt-get update
 sudo apt-get install cuda
 ```
 
-It is worth mentioning that, the described procedure is the straight-forward approach of installing CUDA. Issues like "black screen", "stuck in login page" and other incompatibilities may happen which are beyond the scope of this documentation.
+It is worth mentioning that, the described procedure is the straight-forward approach of installing CUDA. Issues like `black screen`, `stuck in login page` and other incompatibilities may happen which are beyond the scope of this documentation.
 
 
 ## Preinstallation and CUDA compatibility
@@ -37,7 +37,7 @@ Caffe has different dependencies which are required by its structure. In the fol
 The Caffe installation in this documentation uses the build-in python of the 'Ubuntu-Trusty(14.04)'. However 'Anaconda-based' installation can be performed but it is not required as for the moment it has more incompatibilies and may make the installation more complicated.
 
 ### Installing git, BLAS and unzip
-'BLAS' can be used as the backend of matrix and vector computations of Caffe. There are different implementations of this library. [OpenBLAS](http://www.openblas.net/) has been chosed. 
+`BLAS` can be used as the backend of matrix and vector computations of Caffe. There are different implementations of this library. [OpenBLAS](http://www.openblas.net/) has been chosed. 
 ```
 sudo apt-get install libopenblas-dev git unzip
 ```
@@ -58,7 +58,7 @@ wget https://raw.githubusercontent.com/jayrambhia/Install-OpenCV/master/Ubuntu/2
 chmod +x opencv2_4_9.sh 
 ./opencv2_4_9.sh
 ```
-However by using this method, [unsupported gpu architecture](http://stackoverflow.com/questions/28010399/build-opencv-with-cuda-support) error has been reported. Most like this is due to requirements of some OpenCV installations to define the "CUDA_GENERATION" explicitly.
+However by using this method, [unsupported gpu architecture](http://stackoverflow.com/questions/28010399/build-opencv-with-cuda-support) error has been reported. Most like this is due to requirements of some `OpenCV` installations to define the "CUDA_GENERATION" explicitly.
 #### Install from the source
 Install using the source from the [source](http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html)
 
@@ -72,7 +72,7 @@ sudo apt-get install libatlas-base-dev
 
 ### Install protobuf
 
-For protobuf installation, simple pip installation is recommended.
+For protobuf installation, simple `pip installation` is recommended.
 ```
 pip install protobuf
 ```
@@ -88,12 +88,12 @@ The repository must be cloned:
 git clone https://github.com/BVLC/caffe
 ```
 
-After going to code directory, a copy of "Makefile.config.example" under the new name of ""Makefile.config" must be make to be modified if necessary.
+After going to code directory, a copy of `Makefile.config.example` file under the new name of `Makefile.config` must be make to be modified if necessary.
 ```
 cd code/caffe
 cp Makefile.config.example Makefile.config
 ```
-For makking any modification the "Makefile.config" must be opened. Here's are few possible modifications:
+For making any modification, the `Makefile.config` must be edited. Here's are few possible modifications:
 
 * The CuDNN can be activated using the assigned flag.
 * Instead of Python, Anaconda can be used by changing the associated paths.
