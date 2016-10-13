@@ -89,7 +89,7 @@ git clone https://github.com/BVLC/caffe
 
 After going to code directory, a copy of "Makefile.config.example" under the new name of ""Makefile.config" must be make to be modified if necessary.
 ```
-cd code
+cd code/caffe
 cp Makefile.config.example Makefile.config
 ```
 For makking any modification the "Makefile.config" must be opened. Here's are few possible modifications:
