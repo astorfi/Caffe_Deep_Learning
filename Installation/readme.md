@@ -58,6 +58,7 @@ wget https://raw.githubusercontent.com/jayrambhia/Install-OpenCV/master/Ubuntu/2
 chmod +x opencv2_4_9.sh 
 ./opencv2_4_9.sh
 ```
+However by using this method, [unsupported gpu architecture](http://stackoverflow.com/questions/28010399/build-opencv-with-cuda-support) error has been reported. Most like this is due to requirements of some OpenCV installations to define the "CUDA_GENERATION" explicitly.
 #### Install from the source
 Install using the source from the [source](http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html)
 
