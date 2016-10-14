@@ -107,6 +107,7 @@ make runtest
 ```
 It is worth mentioning that `-jX` command can be added to the above commands to increase the speed of process. `X` is the 
 number of supported CPU cores.
+
 Then it might be necessary to copy appropriete files be copied in order to prevent [this issue](https://github.com/BVLC/caffe/issues/1463).
 ```
 sudo cp libhdf5_hl.so.7 libhdf5_hl.so.8
