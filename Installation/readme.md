@@ -109,11 +109,27 @@ In the end we can compile and make all the test files:
 ```
 make all
 make test
-make runtest
 ```
 It is worth mentioning that `-jX` command can be added to the above commands to increase the speed of process. `X` is the 
 number of supported CPU cores.
 
+### Installing Pycaffe
+For having a python interface for the caffe use the following:
+```
+cd python
+for req in $(cat requirements.txt); do pip install $req; done
+cd ..
+make pycaffe
+```
+In the above terminal commands the assumption is that we are in the `$CAFFE_ROOT`.
+
+In the end we can run all the tests:
+```
+make runtest
+```
+
+
+### Reported Issue
 Then it might be necessary to copy appropriete files be copied in order to prevent [this issue](https://github.com/BVLC/caffe/issues/1463).
 ```
 sudo cp libhdf5_hl.so.7 libhdf5_hl.so.8
