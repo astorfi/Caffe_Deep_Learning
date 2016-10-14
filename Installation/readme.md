@@ -41,7 +41,7 @@ The Caffe installation in this documentation uses the build-in python of the 'Ub
 ```
 which python
 ```
-Basically you need to check that the Anaconda is not installed or the `default Python` does not belongs to the `Anaconda path`.
+Basically you need to check that the Anaconda is not installed or the `default Python` does not belongs to the `Anaconda path`. With this check-up you can make sure that the `Caffe` installation does not point to the wrong path. This step is crucial for using `Python interface` of the `Caffe`.
 
 ### Installing git, BLAS and unzip
 `BLAS` can be used as the backend of matrix and vector computations of Caffe. There are different implementations of this library. [OpenBLAS](http://www.openblas.net/) has been chosed. 
