@@ -36,6 +36,13 @@ Caffe has different dependencies which are required by its structure. In the fol
 
 The Caffe installation in this documentation uses the build-in python of the 'Ubuntu-Trusty(14.04)'. However 'Anaconda-based' installation can be performed but it is not required as for the moment it has more incompatibilies and may make the installation more complicated.
 
+**WARNING:** make sure the `Python` recognized by the system is the `default built-in Python` by the ubuntu and *Anaconda does not own the path* for python. You can check that with the following command which returns the root pf python:
+
+```
+which python
+```
+Basically you need to check that the Anaconda is not installed or the `default Python` does not belongs to the `Anaconda path`.
+
 ### Installing git, BLAS and unzip
 `BLAS` can be used as the backend of matrix and vector computations of Caffe. There are different implementations of this library. [OpenBLAS](http://www.openblas.net/) has been chosed. 
 ```
@@ -81,19 +88,15 @@ pip install protobuf
 You may need to install `pip` before installation of the `protobuf`.
 
 ## Clone and Install Caffe from Source
-In this phase, the Caffe repository must be cloned and install. 
-A new directory can be make by the following command:
-```
-mkdir code
-```
-The repository must be cloned:
+In this phase, the Caffe repository must be cloned and install:
+
 ```
 git clone https://github.com/BVLC/caffe
 ```
 
 After going to code directory, a copy of `Makefile.config.example` file under the new name of `Makefile.config` must be make to be modified if necessary.
 ```
-cd code/caffe
+cd caffe
 cp Makefile.config.example Makefile.config
 ```
 For making any modification, the `Makefile.config` must be edited. Here's are few possible modifications:
