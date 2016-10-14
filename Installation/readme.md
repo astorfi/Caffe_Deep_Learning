@@ -64,6 +64,7 @@ Install using the source from the [source](http://docs.opencv.org/2.4/doc/tutori
 
 ### Install other dependecies(Boost,...)
 ```
+sudo apt-get update
 sudo apt-get install libboost-all-dev
 sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libboost-all-dev libhdf5-serial-dev
 sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compiler
@@ -76,6 +77,8 @@ For protobuf installation, simple `pip installation` is recommended.
 ```
 pip install protobuf
 ```
+
+You may need to install `pip` before installation of the `protobuf`.
 
 ## Clone and Install Caffe from Source
 In this phase, the Caffe repository must be cloned and install. 
