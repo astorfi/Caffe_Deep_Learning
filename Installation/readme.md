@@ -83,7 +83,7 @@ sudo apt-get install libatlas-base-dev
 
 For protobuf installation, simple `pip installation` is recommended.
 ```
-pip install protobuf
+sudo pip install protobuf
 ```
 
 You may need to install `pip` before installation of the `protobuf`.
