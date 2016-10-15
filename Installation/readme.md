@@ -175,3 +175,30 @@ sudo cp libhdf5.so.7 libhdf5.so.8
 ```
 
 
+### Anaconda Installation
+
+At this moment the assumption is that the user wants to install `Anaconda` and use the `Caffe`.
+
+#### Download
+
+Anaconda must be downloaded from its [website](https://www.continuum.io/downloads). `Anaconda Python 2.7` is recommended.
+
+#### Editing the bash file
+
+The following command must be added to the end of `source bash file`:
+```
+export PATH="/home/sina/anaconda/bin:$PATH"
+
+```
+
+#### Installing protobuf
+The protobuf should be installed this time using `conda`:
+```
+conda install protobuf
+```
+
+### Using Pycharm or other IDEs
+
+In order to use the IDE and importing Caffe, The IDE(ex: Pycharm) *must be run from the terminal*.
+
+
