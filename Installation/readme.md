@@ -72,6 +72,7 @@ Install using the source from the [source](http://docs.opencv.org/2.4/doc/tutori
 ### Install other dependecies(Boost,...)
 ```
 sudo apt-get update
+sudo apt-get install python-skimage
 sudo apt-get install libboost-all-dev
 sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libboost-all-dev libhdf5-serial-dev
 sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compiler
@@ -125,6 +126,8 @@ In the above terminal commands the assumption is that we are in the `$CAFFE_ROOT
 `permission denied` issue while installing dependencies. However adding `sudo` has not been mentioned as part of the
 documentation provided by the [official Caffe installation](http://caffe.berkeleyvision.org/installation.html#prerequisites), it demonstrated incompatibility by ignoring `sudo`.
 
+WARNING: The above requirement must be installed in the default python which is in the root otherwise the cannot be recognized by the `pycaffe`. However using the command `sudo apt-get install python-skimage` probably immune the installation from its last part which is installing the dependencies defined in the `requirements.txt` file.
+
 In the end we can run all the tests:
 ```
 make runtest
@@ -147,6 +150,22 @@ make test
 make runtest
 ```
 
+Now add the following to the `source bash file`:
+```
+export CAFFE_ROOT=/path/to/caffe (ex: /home/username/caffe)
+export PYTHONPATH=$CAFFE_ROOT/python:$PYTHONPATH
+```
+
+### Installation check
+
+By using the following command check if the `Caffe` is already installed and can be loaded by `Pycaffe`:
+```
+python
+import caffe
+```
+
+**CAVEAT:** If you cannot import `Caffe` that does not mean `Caffe` is not installed! Passing all tests in the previous phase
+guaranties the success of installation `Caffe`. However not being able to import caffe after running python is related to the pycaffe interface.
 
 ### Reported Issue
 Then it might be necessary to copy appropriete files be copied in order to prevent [this issue](https://github.com/BVLC/caffe/issues/1463).
