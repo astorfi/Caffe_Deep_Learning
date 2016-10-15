@@ -130,6 +130,22 @@ In the end we can run all the tests:
 make runtest
 ```
 
+### Alternatinve Method
+
+Another way for considering the procedure of the installation is to to the following:
+```
+cd python
+for req in $(cat requirements.txt); do sudo pip install $req; done
+cd ..
+```
+
+Then make all the necessary elements:
+```
+make all
+make test
+make runtest
+``
+
 
 ### Reported Issue
 Then it might be necessary to copy appropriete files be copied in order to prevent [this issue](https://github.com/BVLC/caffe/issues/1463).
