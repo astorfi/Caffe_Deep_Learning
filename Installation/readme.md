@@ -2,10 +2,10 @@
 
 The step by step processes of caffe installation in `Ubuntu(14.04)` is provided here. 
 
-## Hardware & cuda version
+### Hardware & cuda version
 The following installation has been implemented and successfully tested on [CUDA 8.0](http://on-demand.gputechconf.com/gtc/2016/webinar/cuda-8-features-overview.pdf) and [NVIDIA TITAN X(Pwered by Pascal) GPU](http://www.geforce.com/hardware/10series/titan-x-pascal). However the method can simply be used for older version of `CUDA` and older `GPU architectures`.
 
-## CUDA installation
+### CUDA installation
 
 For the [NVIDIA TITAN X(Pwered by Pascal) GPU](http://www.geforce.com/hardware/10series/titan-x-pascal), installing CUDA 8.0 is necessary. The CUDA 8.0 download file and installation procedure can be found [here](https://developer.nvidia.com/cuda-downloads). The system platform has to be chosen as the following image: ![](Images/Select Target Platform.png).
 
@@ -20,7 +20,7 @@ sudo apt-get install cuda
 It is worth mentioning that, the described procedure is the straight-forward approach of installing CUDA. Issues like `black screen`, `stuck in login page` and other incompatibilities may happen which are beyond the scope of this documentation.
 
 
-## Preinstallation and CUDA compatibility
+### Preinstallation and CUDA compatibility
 Now the assumption is that the [CUDA](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#axzz4MnU6Gq6E) is already installed.
 
 Check the supporting GPU(s) and Ubuntu version using the following command:
@@ -31,7 +31,7 @@ uname -m && cat /etc/*release
  gcc --version
 ```
 
-## Install dependencies
+## Python Installation
 Caffe has different dependencies which are required by its structure. In the following subsections an abstract list of these dependencies and the commands for installing them are provided. Depending on the available installed packages on the system, more or less dependencies might be required.
 
 The Caffe installation in this documentation uses the build-in python of the 'Ubuntu-Trusty(14.04)'. However 'Anaconda-based' installation can be performed but it is not required as for the moment it has more incompatibilies and may make the installation more complicated.
@@ -88,7 +88,7 @@ pip install protobuf
 
 You may need to install `pip` before installation of the `protobuf`.
 
-## Clone and Install Caffe from Source
+### Clone and Install Caffe from Source
 In this phase, the Caffe repository must be cloned and install:
 
 ```
@@ -175,15 +175,15 @@ sudo cp libhdf5.so.7 libhdf5.so.8
 ```
 
 
-### Anaconda Installation
+## Anaconda Installation
 
-At this moment the assumption is that the user wants to install `Anaconda` and use the `Caffe`.
+At this moment the assumption is that the user wants to install `Anaconda` and use the `Caffe`. So after `Python Installation Procedure`, few modifications must be done.
 
-#### Download
+### Download
 
 Anaconda must be downloaded from its [website](https://www.continuum.io/downloads). `Anaconda Python 2.7` is recommended.
 
-#### Editing the bash file
+### Editing the bash file
 
 The following two command should be added to the end of `source bash file`. However based on the experiments the necessity of the second one has not been proven! 
 ```
@@ -192,13 +192,13 @@ export LD_LIBRARY_PATH=/home/sina/anaconda/lib:$LD_LIBRARY_PATH
 
 ```
 
-#### Installing protobuf
+### Installing protobuf
 The protobuf should be installed this time using `conda`:
 ```
 conda install protobuf
 ```
 
-### Using Pycharm or other IDEs
+## Using Pycharm or other IDEs
 
 In order to use the IDE and importing Caffe, The IDE(ex: Pycharm) *must be run from the terminal*.
 
