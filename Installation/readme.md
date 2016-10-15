@@ -142,6 +142,7 @@ cd ..
 Then make all the necessary elements:
 ```
 make all
+make pycaffe
 make test
 make runtest
 ```
