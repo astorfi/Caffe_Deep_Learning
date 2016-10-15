@@ -144,7 +144,7 @@ Then make all the necessary elements:
 make all
 make test
 make runtest
-``
+```
 
 
 ### Reported Issue
