@@ -117,11 +117,13 @@ number of supported CPU cores.
 For having a python interface for the caffe use the following:
 ```
 cd python
-for req in $(cat requirements.txt); do pip install $req; done
+for req in $(cat requirements.txt); do sudo pip install $req; done
 cd ..
 make pycaffe
 ```
-In the above terminal commands the assumption is that we are in the `$CAFFE_ROOT`.
+In the above terminal commands the assumption is that we are in the `$CAFFE_ROOT`. The `sudo` part is to overcome the
+`permission denied` issue while installing dependencies. However adding `sudo` has not been mentioned as part of the
+documentation provided by the [official Caffe installation](http://caffe.berkeleyvision.org/installation.html#prerequisites), it demonstrated incompatibility by ignoring `sudo`.
 
 In the end we can run all the tests:
 ```
