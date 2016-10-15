@@ -31,7 +31,7 @@ uname -m && cat /etc/*release
  gcc --version
 ```
 
-## Python Installation
+## Caffe Installation Using Python
 Caffe has different dependencies which are required by its structure. In the following subsections an abstract list of these dependencies and the commands for installing them are provided. Depending on the available installed packages on the system, more or less dependencies might be required.
 
 The Caffe installation in this documentation uses the build-in python of the 'Ubuntu-Trusty(14.04)'. However 'Anaconda-based' installation can be performed but it is not required as for the moment it has more incompatibilies and may make the installation more complicated.
@@ -175,7 +175,7 @@ sudo cp libhdf5.so.7 libhdf5.so.8
 ```
 
 
-## Anaconda Installation
+## Caffe Installation Using Anaconda
 
 At this moment the assumption is that the user wants to install `Anaconda` and use the `Caffe`. So after `Python Installation Procedure`, few modifications must be done.
 
