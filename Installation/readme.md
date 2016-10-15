@@ -19,6 +19,18 @@ sudo apt-get install cuda
 
 It is worth mentioning that, the described procedure is the straight-forward approach of installing CUDA. Issues like `black screen`, `stuck in login page` and other incompatibilities may happen which are beyond the scope of this documentation.
 
+The last step of installation CUDA is to add the path of it to `source bash file`:
+```
+sudo gedit ~/.bashrc
+```
+
+The the two following line must be added to the file with regard to `CUDA 8.0` installation:
+
+```
+export PATH=/usr/local/cuda-8.0/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
+```
+
 
 ### Preinstallation and CUDA compatibility
 Now the assumption is that the [CUDA](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#axzz4MnU6Gq6E) is already installed.
