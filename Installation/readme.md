@@ -199,8 +199,8 @@ Anaconda must be downloaded from its [website](https://www.continuum.io/download
 
 The following two command should be added to the end of `source bash file`. However based on the experiments the necessity of the second one has not been proven! 
 ```
-export PATH="/home/sina/anaconda/bin:$PATH"
-export LD_LIBRARY_PATH=/home/sina/anaconda/lib:$LD_LIBRARY_PATH
+export PATH="/home/username/anaconda/bin:$PATH"
+export LD_LIBRARY_PATH=/home/username/anaconda/lib:$LD_LIBRARY_PATH
 
 ```
 
