@@ -45,7 +45,7 @@ uname -m && cat /etc/*release
 
 ### CuDNN Installation
 
-For increasing the performance(loosly speaking and not necessarily) installing CuDNN is recommended.
+For increasing the performance(loosly speaking and not necessarily) installing [CuDNN](https://developer.nvidia.com/cudnn) is recommended.
 After downloading the relevent file to the system, assume the file is downloaded and extracted in the <directory> under
 the name of `cuda`. the go to the folder which `cuda` is there and run the following:
 
