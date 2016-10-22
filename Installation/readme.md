@@ -43,6 +43,24 @@ uname -m && cat /etc/*release
  gcc --version
 ```
 
+### CuDNN Installation
+
+For increasing the performance(loosly speaking and not necessarily) installing CuDNN is recommended.
+After downloading the relevent file to the system, assume the file is downloaded and extracted in the <directory> under
+the name of `cuda`. the go to the folder which `cuda` is there and run the following:
+
+```
+sudo cp -P cuda/include/cudnn.h /usr/local/cuda/include
+sudo cp -P cuda/lib64/libcudnn* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+```
+
+Moreover the path to the CuDNN library must be added to system path as follows:
+```
+cd <installpath>
+    export LD_LIBRARY_PATH=`pwd`:$LD_LIBRARY_PATH
+```
+
 ## Caffe Installation Using Python
 Caffe has different dependencies which are required by its structure. In the following subsections an abstract list of these dependencies and the commands for installing them are provided. Depending on the available installed packages on the system, more or less dependencies might be required.
 
