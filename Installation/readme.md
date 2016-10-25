@@ -1,4 +1,4 @@
-# Caffe Installation 
+# Caffe Installation In Ubuntu with GPU support
 
 The step by step processes of caffe installation in `Ubuntu(14.04)` is provided here. 
 
