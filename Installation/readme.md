@@ -14,7 +14,7 @@ Still some of the modules might be stuck in the kernel. Get their names by:
 ```
 dkms status
 ```
-The output should be as follows:
+The output should be `void` or if there is any remnant module the output is as follows:
 ```
 nvidia-current-updates, "module_version", "kernel_version", x86_64: installed
 ```
