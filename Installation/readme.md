@@ -24,7 +24,7 @@ sudo dkms remove nvidia-current-updates/module_version -k kernel_version
 ```
 Now the CUDA can safely be installed using the aforementioned procedure in the previous section.
 
-**WARNING:** DO NOT REBOOT AT THIS STAGE. ALL THE NIVIDIA DRIVERS ARE REMOVED AND IF YOU REBOOT THERE IS NO DRIVER. REBOOT AFTER INTALLATION OF CUDA WHICH IS THE NEXT STEP.
+**WARNING:** DO NOT REBOOT AT THIS STAGE. ALL THE NIVIDIA DRIVERS HAVE BEEN REMOVED AND IF YOU REBOOT THERE IS NO DRIVER. REBOOT AFTER INTALLATION OF CUDA WHICH IS THE NEXT STEP.
 
 
 ### CUDA installation
