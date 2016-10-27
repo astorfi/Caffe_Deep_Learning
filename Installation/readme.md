@@ -5,7 +5,31 @@ The step by step processes of caffe installation in `Ubuntu(14.04)` is provided 
 ### Hardware & cuda version
 The following installation has been implemented and successfully tested on [CUDA 8.0](http://on-demand.gputechconf.com/gtc/2016/webinar/cuda-8-features-overview.pdf) and [NVIDIA TITAN X(Pwered by Pascal) GPU](http://www.geforce.com/hardware/10series/titan-x-pascal). However the method can simply be used for older version of `CUDA` and older `GPU architectures`.
 
+### CUDA preinstallation
+Before installation of CUDA, It is recommended to uninstall all NVIDIA drivers in order to prevent having any conflict with the new CUDA driver.
+```
+sudo apt-get purge nvidia*
+```
+Still some of the modules might be stuck in the kernel. Get their names by:
+```
+dkms status
+```
+The output should be as follows:
+```
+nvidia-current-updates, "module_version", "kernel_version", x86_64: installed
+```
+`Module version` and `kernel version` are of format `304.4` and `3.1.0-36-generic` respectively. These modules should be removed by the following command:
+```
+sudo dkms remove nvidia-current-updates/module_version -k kernel_version
+```
+Now the CUDA can safely be installed using the aforementioned procedure in the previous section.
+
+`Warning:` DO NOT REBOOT AT THIS STAGE. ALL THE NIVIDIA DRIVERS ARE REMOVED AND IF YOU REBOOT THERE IS NO DRIVER. REBOOT AFTER INTALLATION OF CUDA WHICH IS THE NEXT STEP.
+
+
 ### CUDA installation
+
+#### Installation Using NVIDIA Released Files.
 
 For the [NVIDIA TITAN X(Pwered by Pascal) GPU](http://www.geforce.com/hardware/10series/titan-x-pascal), installing CUDA 8.0 is necessary. The CUDA 8.0 download file and installation procedure can be found [here](https://developer.nvidia.com/cuda-downloads). The system platform has to be chosen as the following image: ![](images/Select Target Platform.png).
 
@@ -31,31 +55,14 @@ export PATH=/usr/local/cuda-8.0/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
 ```
 
-#### CUDA preinstallation
-Before installation of CUDA, It is recommended to uninstall all NVIDIA drivers:
-```
-sudo apt-get purge nvidia*
-```
-Still some of the modules might be stuck in the kernel. Get their names by:
-```
-dkms status
-```
-The output should be as follows:
-```
-nvidia-current-updates, "module_version", "kernel_version", x86_64: installed
-```
-`Module version` and `kernel version` are of format `304.4` and `3.1.0-36-generic` respectively. These modules should be removed by the following command:
-```
-sudo dkms remove nvidia-current-updates/module_version -k kernel_version
-```
-Now the CUDA can safely be installed using the aforementioned procedure in the previous section.
+`NOTE:` This istallation can be used for any CUDA version however the aforementioned PATH should be addressed based on the installed CUDA verion.
 
+#### Installation Using Current-Update Package.
 Alternatively `current-updates` can be used since it is a package that is cloned from NVIDIA’s releases,
 but it is officially tested and packaged by Ubuntu. The command is as follows:
 ```
 sudo apt-get install nvidia-current-updates nvidia-settings-updates
 ```
-
 
 
 ### Preinstallation and CUDA compatibility
