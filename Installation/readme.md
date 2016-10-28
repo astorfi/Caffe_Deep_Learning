@@ -132,7 +132,7 @@ However by using this method, [unsupported gpu architecture](http://stackoverflo
 #### Install from the source
 Install using the source from the [source](http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html)
 
-#### ALternative Solution
+#### Alternative Solution
 
 Alternatively by adding `python-opencv` to the following part commands(installing dependencies) the opencv can be installed 
 and also is compatible with most of the distributions.
