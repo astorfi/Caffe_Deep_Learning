@@ -88,9 +88,9 @@ form.exec_()
 choice_phase = form.choice
 
 if choice_phase == "TRAIN":
-    LMDB_FILE_NAME = '/home/sina/caffe/TrainModels/Siamese/SiameseCNN/DATA/TWIN/pairs_twins_train_224x224_lmdb'
+    LMDB_FILE_NAME = 'PATH/to?LMDB/train'
 elif choice_phase == "TEST":
-    LMDB_FILE_NAME = '/home/sina/caffe/TrainModels/Siamese/SiameseCNN/DATA/TWIN/Image_TEST_test_id_2014_2015_joint_unseen-2010to2013'
+    LMDB_FILE_NAME = 'PATH/to?LMDB/test'
 # If user canceled the operation.
 elif choice_phase == 'Cancel':
     sys.exit("Canceled by the user")
@@ -127,8 +127,7 @@ caffe.set_mode_gpu()
 
 # Necessary file calling
 MODEL_FILE = 'test_performance.prototxt'
-# PRETRAINED_MODEL = '/home/sina/caffe/TrainModels/Siamese/SiameseCNN/DATA/weights/casia_train_224x224_iter_100000.caffemodel'
-PRETRAINED_MODEL = '/home/sina/caffe/TrainModels/Siamese/SiameseCNN/DATA/weights/twins_train_224x224_iter_25000.caffemodel'
+PRETRAINED_MODEL = 'Path/to/CAFFEMODEL'
 
 
 # Activating the fowrad pass towards the network.
