@@ -6,4 +6,4 @@ You are more than welcome to contribute to this repository. If you'd like to con
 
 ## Caffe Installation
 
-As lots of the users may say `Caffe installation` is a challenging task. Please refer to [this installation](https://github.com/astorfi/Caffe_Deep_Learning/tree/master/Installation) for following a step by step process.
+As lots of the users may say `Caffe installation` is a challenging task. Please refer to [this installation](https://github.com/astorfi/Caffe_Deep_Learning/tree/master/Installation) for following a step by step process. The installation is subjected to CUDA 8.0 and NVIDIA TITAN X(Pwered by Pascal) GPUs.
