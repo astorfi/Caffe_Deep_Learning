@@ -5,3 +5,5 @@ This repository is dedicated to how to work with Caffe from installation to impl
 You are more than welcome to contribute to this repository. If you'd like to contribute to Caffe_Deep_Learning, be sure to create a side branch first because pull request to master branch is locked.
 
 ## Caffe Installation
+
+As lots of the users may say `Caffe installation` is a challenging task. Please refer to [this installation](https://github.com/astorfi/Caffe_Deep_Learning/tree/master/Installation) for following a step by step process.
