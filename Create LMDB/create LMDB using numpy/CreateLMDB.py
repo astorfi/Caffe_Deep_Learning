@@ -2,7 +2,6 @@
 import os
 import glob
 import sys
-sys.path.append("/home/sina/caffe/python")
 import multiprocessing
 import random
 import dircache
@@ -24,6 +23,8 @@ but they basically can be anything saved in numpy files.
 
 This file do the following:
 1 - load all the ".npy" data from a folder and create a big numpy array
+    * The numpy files initially have the format of (Width, height, num_channels, 2) and 2 is due to having pairs.
+      Change the dimensions along this code as required by your specific file shape.
 2 - Create an LMDB file from that numpy array
 """
 
@@ -122,7 +123,8 @@ choice_mean = form.choice
 
 # Source and destination paths(both with absolute path).
 this_path = os.path.dirname(os.path.abspath(__file__))
-src_folder_path = '/media/sina/3F8C28A65EBC23F1/Research/DataSet/PROCESSED/FaceTwins/Preprocessing/PREPROCESSING/2-CreatePairs/PAIRS/' + choice_feature + '/' + choice_phase
+# This path definition is specific. Change it as needed.
+src_folder_path = 'Path/to/root/source' + choice_feature + '/' + choice_phase   
 dst_folder_path = choice_feature + '_' + choice_phase + '_' + 'train-2010to2013-unique'
 
 # # Getting the number of cores for parallel processing
@@ -168,12 +170,14 @@ for f in glob.glob(os.path.join(src_folder_path, "*.npy")):
     # FOr caffianeting the data, the second dimension in the data blob should be the channel!
 
     # Initial format
-    left_init = numpy_array[:, :, :, 0]
-    right_init = numpy_array[:, :, :, 1]
+    left = numpy_array[:, :, :, 0]
+    right = numpy_array[:, :, :, 1]
 
     # Change format
-    left = np.transpose(left_init, (2, 0, 1))
-    right = np.transpose(right_init, (2, 0, 1))
+    # The format supported by Caffe is (Num_Samples, Num_Channels, Width, Height).
+    # Comment this part if you already have the numpy files with the correct format.
+    left = np.transpose(left, (2, 0, 1))
+    right = np.transpose(right, (2, 0, 1))
 
     if choice_mean == 'Yes':
         left[0, :, :] = left[0, :, :] - mean_image[0]
